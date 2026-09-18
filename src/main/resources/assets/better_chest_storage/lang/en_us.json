@@ -1,0 +1,22 @@
+{
+  "item.better_chest_storage.chest_connector": "Chest Connector",
+  "tooltip.better_chest_storage.chest_connector.drag": "Sneak + hold right click: drag an area of chests",
+  "tooltip.better_chest_storage.chest_connector.connect": "Ctrl + right click: connect the selected area",
+  "tooltip.better_chest_storage.chest_connector.release": "Ctrl + left click: deselect or disconnect",
+  "tooltip.better_chest_storage.chest_connector.overview": "Hold to see every connected area",
+  "container.better_chest_storage.chest_grid": "Grid",
+  "gui.better_chest_storage.search": "Search",
+  "gui.better_chest_storage.search.hint": "Search",
+  "gui.better_chest_storage.stored": "Stored: %s",
+  "message.better_chest_storage.selected": "Area selected: %s chests",
+  "message.better_chest_storage.connected": "Connected %s chests into one storage",
+  "message.better_chest_storage.deselected": "Selection cleared",
+  "message.better_chest_storage.disconnected": "Disconnected %s chests",
+  "message.better_chest_storage.no_selection": "Select an area first with sneak + right click drag",
+  "message.better_chest_storage.nothing_to_release": "No selected or connected area here",
+  "message.better_chest_storage.network_broken": "This network lost a chest and was dissolved",
+  "message.better_chest_storage.rejected.not_only_chests": "The area must contain nothing but chests",
+  "message.better_chest_storage.rejected.too_large": "The area is too large (at most %s chests)",
+  "message.better_chest_storage.rejected.overlaps_network": "The area overlaps an already connected one",
+  "message.better_chest_storage.rejected.splits_double_chest": "The area cuts a double chest in half"
+}
