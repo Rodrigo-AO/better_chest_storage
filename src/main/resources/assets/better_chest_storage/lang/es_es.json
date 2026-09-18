@@ -1,0 +1,22 @@
+{
+  "item.better_chest_storage.chest_connector": "Conector de cofres",
+  "tooltip.better_chest_storage.chest_connector.drag": "Shift + clic derecho mantenido: arrastra un área de cofres",
+  "tooltip.better_chest_storage.chest_connector.connect": "Ctrl + clic derecho: conecta el área seleccionada",
+  "tooltip.better_chest_storage.chest_connector.release": "Ctrl + clic izquierdo: deselecciona o desconecta",
+  "tooltip.better_chest_storage.chest_connector.overview": "Sostenlo para ver todas las áreas conectadas",
+  "container.better_chest_storage.chest_grid": "Rejilla",
+  "gui.better_chest_storage.search": "Buscar",
+  "gui.better_chest_storage.search.hint": "Buscar",
+  "gui.better_chest_storage.stored": "Almacenado: %s",
+  "message.better_chest_storage.selected": "Área seleccionada: %s cofres",
+  "message.better_chest_storage.connected": "Conectados %s cofres en un solo almacenamiento",
+  "message.better_chest_storage.deselected": "Selección eliminada",
+  "message.better_chest_storage.disconnected": "Desconectados %s cofres",
+  "message.better_chest_storage.no_selection": "Selecciona primero un área con shift + clic derecho arrastrando",
+  "message.better_chest_storage.nothing_to_release": "Aquí no hay ningún área seleccionada ni conectada",
+  "message.better_chest_storage.network_broken": "Esta red perdió un cofre y se ha disuelto",
+  "message.better_chest_storage.rejected.not_only_chests": "El área solo puede contener cofres",
+  "message.better_chest_storage.rejected.too_large": "El área es demasiado grande (máximo %s cofres)",
+  "message.better_chest_storage.rejected.overlaps_network": "El área se solapa con otra ya conectada",
+  "message.better_chest_storage.rejected.splits_double_chest": "El área parte un cofre doble por la mitad"
+}
