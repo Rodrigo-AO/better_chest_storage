@@ -1,0 +1,76 @@
+plugins {
+	id 'net.fabricmc.fabric-loom' version "${loom_version}"
+}
+
+version = project.version
+group = project.group
+
+base {
+	archivesName = project.archives_base_name
+}
+
+loom {
+	splitEnvironmentSourceSets()
+
+	mods {
+		"better_chest_storage" {
+			sourceSet sourceSets.main
+			sourceSet sourceSets.client
+		}
+	}
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+}
+
+processResources {
+	def props = [
+			version       : project.version,
+			minecraft     : project.minecraft_version,
+			loader        : project.loader_version,
+	]
+	inputs.properties props
+
+	filesMatching('fabric.mod.json') {
+		expand props
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 25
+	it.options.encoding = 'UTF-8'
+}
+
+java {
+	withSourcesJar()
+	sourceCompatibility = JavaVersion.VERSION_25
+	targetCompatibility = JavaVersion.VERSION_25
+}
+
+jar {
+	from('LICENSE') {
+		rename { "${it}_${project.base.archivesName.get()}" }
+	}
+}
+
+/**
+ * Copies the built mod straight into the CurseForge test instance, so it can be tried out with a
+ * single command. Override the target with -PtestInstanceDir=<path> if the instance ever moves.
+ *
+ * Minecraft 26.x ships with official names, so Loom has nothing to remap and the plain jar task
+ * already produces the shippable mod.
+ */
+tasks.register('copyToTestInstance', Copy) {
+	def modsDir = project.findProperty('testInstanceDir')
+			?: "${System.getProperty('user.home')}/curseforge/minecraft/Instances/mods_testing/mods"
+
+	from tasks.named('jar')
+	into modsDir
+
+	doLast {
+		logger.lifecycle("Mod copied to ${modsDir}")
+	}
+}
