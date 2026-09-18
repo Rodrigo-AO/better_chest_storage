@@ -115,6 +115,16 @@ The split matters: the client only ever expresses intent. Modifier keys exist on
 gestures are recognised there, but every decision about what an area is and what leaves a chest is
 made on the server, in `storage/`.
 
+## Crafting
+
+```
+.  P  P
+P  S  P
+S  P  .
+```
+
+`P` is any planks and `S` is a stick. Planks are taken as the `#minecraft:planks` tag rather than a specific type, so the tool can be built from whatever wood is at hand. The recipe shows up in the recipe book as soon as the player picks up any planks.
+
 ## Requirements
 
 * Minecraft 26.3

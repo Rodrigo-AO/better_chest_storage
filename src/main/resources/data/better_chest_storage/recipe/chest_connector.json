@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": "minecraft:stick",
+    "X": "#minecraft:planks"
+  },
+  "pattern": [
+    " XX",
+    "X#X",
+    "#X "
+  ],
+  "result": {
+    "id": "better_chest_storage:chest_connector"
+  }
+}
